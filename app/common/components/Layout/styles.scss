@@ -1,0 +1,9 @@
+@import './app/common/styles/utils/_vars.scss';
+
+.page-layout {
+  padding-top: 86px;
+
+  @media (max-width: $tablet) {
+    padding-top: 60px;
+  }
+}

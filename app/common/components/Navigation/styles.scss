@@ -1,0 +1,71 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+
+
+.navigation {
+  padding-top: 33px;
+
+  &__list {
+    margin: 0 -26px;
+    padding: 0;
+    list-style: none;
+
+    @include clearfix();
+  }
+
+  &__item {
+    float: left;
+    padding: 0 26px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 2px 19px 4px;
+    border-radius: 16px;
+    color: $text-light-color;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: 26px;
+    transition: all .25s ease;
+
+    &:hover {
+      background: $border-color;
+      color: $text-light-color;
+    }
+
+    &--active {
+      background: $primary-color-hover;
+      color: #fff;
+    }
+  }
+
+  .page_footer {
+    background: #d5dee5;
+    padding: 0px !important;
+    font-size: 14px;
+    p {
+      margin: 0px;
+    }
+    a {
+      color:#757d82;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 11px;
+    padding-bottom: 28px;
+
+    &__list {
+      margin: -9px 0;
+    }
+
+    &__item {
+      width: 100%;
+      padding: 9px 0;
+      text-align: center;
+    }
+  }
+}

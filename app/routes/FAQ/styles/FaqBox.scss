@@ -1,0 +1,84 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+.faq-box {
+  @include card();
+
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 30px;
+
+  &__title {
+    white-space: nowrap;
+  }
+
+  &__title svg {
+    display: inline-block;
+    margin-right: 16px;
+    vertical-align: middle;
+  }
+
+  &__title svg path {
+    fill: $primary-color;
+  }
+
+  &__title-text {
+    display: inline-block;
+    margin: 0;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: normal;
+    vertical-align: middle;
+  }
+
+  &__text {
+    margin: 16px 0 32px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  &__more {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 10px 0 0;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  &__more-icon {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+
+  &:hover &__title-text,
+  &:hover &__more {
+    color: $primary-color-hover;
+  }
+
+  &:hover &__title svg path {
+    fill: $primary-color-hover;
+  }
+
+  @media (max-width: $tablet) {
+    &__title-text {
+      font-size: 16px;
+      letter-spacing: 0.89px;
+      line-height: 22px;
+    }
+
+    &__text {
+      margin-top: 21px;
+      margin-bottom: 38px;
+    }
+  }
+}

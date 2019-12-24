@@ -1,0 +1,42 @@
+@import './app/common/styles/utils/_vars.scss';
+
+.geocoder {
+  position: relative;
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: -2px 0 0;
+    padding: 0;
+    background: #fff;
+    list-style: none;
+    box-shadow: 1px 1px 6px 0 rgba(165, 173, 179, .4);
+  }
+
+  &__list-item + &__list-item {
+    border-top: 1px solid $border-color;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 6px 20px 8px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.7px;
+    text-align: left;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+}

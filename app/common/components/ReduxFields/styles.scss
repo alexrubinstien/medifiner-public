@@ -1,0 +1,265 @@
+@import './app/common/styles/utils/_vars.scss';
+
+.field {
+  margin-bottom: 16px;
+
+  &__input--error {
+    border-color: $error;
+  }
+
+  &__error {
+    margin-top: 6px;
+    color: $error;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.55px;
+  }
+
+  &__label {
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &__label-optional {
+    color: $text-light-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: lowercase;
+  }
+
+  &__checkboxes {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    margin: -7px -15px;
+
+    &--space-between {
+      justify-content: space-between;
+      -ms-flex-pack: justify;
+    }
+  }
+
+  &__checkbox-container {
+    float: left;
+    position: relative;
+    padding: 7px 15px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: $background-1;
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__checkbox:checked + &__fake-checkbox {
+    background: $primary-color;
+    border: 0;
+    padding-top: 3px;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid $border-color;
+    border-radius: 4px;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 19px;
+
+    &:-moz-placeholder {
+      color: $text-light-color;
+    }
+
+    &:-ms-input-placeholder {
+      color: $text-light-color;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $text-light-color;
+    }
+  }
+}
+
+.select {
+  &__control {
+    min-height: 40px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid $border-color !important;
+    overflow: hidden;
+
+    &--is-disabled {
+      .select__indicator {
+        color: $text-light-color !important;
+      }
+    }
+
+    &--is-focused {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &__indicator {
+    color: $primary-color !important;
+  }
+
+  &__indicators {
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+    z-index: 1;
+  }
+
+  &__value-container {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    display: -ms-flexbox;
+    -webkit-flex: 1;
+    flex: 1;
+    -ms-flex: 1;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    padding: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    box-sizing: border-box;
+    color: $primary-color !important;
+  }
+
+  &__placeholder {
+    margin: 0 !important;
+    color: $text-light-color !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 26px !important;
+    letter-spacing: 0.8px !important;
+    white-space: nowrap;
+  }
+
+  &__menu {
+    margin-top: -2px !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: 1px 1px 6px 0 rgba(165, 173, 179, .4) !important;
+    z-index: 10 !important;
+  }
+
+  &__menu-list {
+    padding: 0 !important;
+
+    &--is-multi {
+      padding: 9px 0 !important;
+    }
+  }
+
+  &__option {
+    padding: 6px 20px 8px !important;
+    color: $primary-color !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 26px !important;
+    letter-spacing: 0.7px;
+    cursor: pointer !important;
+    transition: all 0.25s ease;
+
+    &--is-focused,
+    &--is-selected {
+      background: transparent !important;
+      color: $primary-color-hover !important;
+    }
+  }
+
+  &__option + &__option {
+    border-top: 1px solid $border-color;
+  }
+
+  &__single-value {
+    color: $primary-color !important;
+  }
+
+  &__multi-option {
+    position: relative;
+    padding: 11px 20px 11px 46px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.7px;
+    transition: all 0.25s ease;
+  }
+
+  &__multi-option-checkbox {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+    background-color: $background-2;
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+
+    &--is-selected {
+      background: $primary-color;
+    }
+  }
+}
+
+.error-component {
+  &__text {
+    margin: 0 0 26px;
+    color: $error;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}

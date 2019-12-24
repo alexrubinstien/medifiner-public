@@ -1,0 +1,65 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+.search-medication {
+  @include column(12);
+  padding-top: 30px;
+  padding-right: 0;
+  padding-bottom: 22px;
+  padding-left: 0;
+
+  &__title {
+    margin: 0 0 22px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1.07px;
+  }
+
+  &__form-type {
+    float: left;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &__change-form-container {
+    float: right;
+    margin: 0;
+  }
+
+  &__change-form {
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 15px;
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 23px;
+
+    &__title {
+      font-size: 24px;
+      letter-spacing: 1px;
+      line-height: 28px;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+.medication-provider {
+  position: relative;
+  padding: 20px 0 25px;
+
+  &__link-back {
+    font-size: 14px;
+    margin-top: 0;
+
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  &__name {
+    margin: 10px 0;
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  &__supply {
+    margin: 20px 0;
+  }
+
+  &__supply-header {
+    @include row();
+  }
+
+  &__supply-title {
+    @include column(7);
+
+    h3 {
+      margin: 8px 0;
+    }
+  }
+
+  &__supply-report {
+    @include column(5);
+    margin: 8px 0;
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  &__supply-drug {
+    @include row();
+    padding-bottom: 8px;
+  }
+
+  &__supply-drug-name {
+    @include column(7);
+    background: $border-color;
+    height: 1px;
+    margin-top: 14px;
+
+    span {
+      background: #fff;
+      position: relative;
+      top: -14px;
+      padding: 0 15px;
+      left: -15px;
+      float: left;
+    }
+  }
+
+  &__supply-drug-supply {
+    @include column(5);
+  }
+
+  &__supply-info {
+    color: $text-light-color;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  &__about {
+    margin: 30px 0;
+  }
+
+  &__about-title {
+    margin: 8px 0;
+  }
+
+  &__about-text {
+    color: $text-light-color;
+    font-size: 14px;
+    margin: 4px 0;
+  }
+
+  &__about-link {
+    font-size: 14px;
+    padding-right: 30px;
+
+    i {
+      padding-right: 5px;
+    }
+  }
+
+  &__hours {
+    margin: 30px 0;
+  }
+
+  &__hours-title {
+    margin: 8px 0;
+  }
+
+  &__hours-day {
+    @include row();
+    font-size: 14px;
+  }
+
+  &__hours-day-name {
+    @include column(2);
+  }
+
+  &__hours-day-hours {
+    @include column(6);
+  }
+
+  &__updated {
+    color: $text-light-color;
+    font-size: 14px;
+  }
+  @media (max-width: $mobile) {
+    padding: 11px 0 25px;
+    border-top: 1px solid $background-3;
+
+    & + & {
+      margin-top: 0;
+    }
+
+    &__hours-day-name {
+      @include column(6);
+    }
+  }
+}

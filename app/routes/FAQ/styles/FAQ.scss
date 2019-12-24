@@ -1,0 +1,106 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+.faq {
+  padding: 68px 0 85px;
+
+  &__title {
+    margin: 0 0 45px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1.07px;
+    text-align: center;
+  }
+
+  &__boxes {
+    @include row();
+  }
+
+  &__box {
+    @include column(4);
+  }
+
+  &__subtitle {
+    margin: 80px 0 32px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 26px;
+  }
+
+  &__answers {
+    @include row();
+  }
+
+  &__answers-column {
+    @include column(6);
+  }
+
+  &__answer {
+    padding: 8px 0;
+  }
+
+  &__answer-link {
+    color: $text-light-color;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+  }
+
+  &__answer-icon {
+    color: $primary-color;
+    font-size: 14px;
+  }
+
+  &__answer-icon {
+    margin-left: 18px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 21px;
+
+    &__title {
+      margin-bottom: 26px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      line-height: 28px;
+    }
+
+    &__boxes {
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+
+    &__box {
+      @include column(12);
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &__subtitle {
+      margin: 48px 0 13px;
+      font-size: 20px;
+      letter-spacing: 0.83px;
+      line-height: 25px;
+    }
+
+    &__answers-column {
+      @include column(12);
+    }
+
+    &__answer-link {
+      position: relative;
+      display: block;
+      padding-right: 16px;
+    }
+
+    &__answer-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+}

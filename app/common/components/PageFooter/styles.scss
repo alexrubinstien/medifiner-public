@@ -1,0 +1,62 @@
+@import './app/common/styles/utils/_vars.scss';
+
+.page-footer {
+  &__footer-copy {
+    background: $border-color;
+  }
+
+  &__copy-container {
+    padding: 17px 0;
+	justify-content: space-between;
+	color: $text-light-color;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+    display: flex;
+  }
+
+  &__copy {
+    margin: 0;
+    padding: 0;
+    
+	a {
+      color: $text-light-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__byline {
+    /*margin: auto;*/
+   	margin: 0;
+   	padding: 0;
+
+    a {
+      color: $text-light-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__language {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  & &__copy-container {
+    padding: 2px 0;
+  }
+  @media (max-width: $mobile) {
+    text-align: center;
+
+    &__language {
+      float: none;
+    }
+
+    &__copy-container {
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import './app/common/styles/utils/_vars.scss';
+@import './app/common/styles/utils/_mixins.scss';
+
+.find-medication-view {
+  height: calc(100vh - 116px);
+  max-height: calc(100vh - 116px);
+  overflow: hidden;
+  @include clearfix();
+
+  &__search {
+    float: left;
+    width: 50vw;
+    height: 100%;
+    background: #fff;
+    box-shadow: 1px 1px 11px 0 rgba(165, 173, 179, .4);
+  }
+
+  &__search-content {
+    width: 100%;
+    max-width: 715px;
+    overflow-y: auto;
+    height: 100%;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 0 30px;
+  }
+
+  &__map {
+    float: right;
+    width: 50vw;
+    height: 100%;
+
+    &.ie {
+      width: 49vw; // hack for showing even with the weird way ie handles floats and vw units
+      background: lighten($text-light-color, 40%);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__switcher {
+    position: fixed;
+    bottom: 45px;
+    left: 15px;
+    z-index: 3;
+    display: none;
+  }
+
+  .no-gl-warning-message {
+    font-size: 20px;
+    position: relative;
+    display: block;
+    color: black;
+    margin: auto;
+    text-align: center;
+    max-width: 60%;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: $tablet) {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 142px);
+    max-height: calc(100vh - 142px);
+    height: calc(100vh - 116px);
+    max-height: calc(100vh - 116px);
+
+    &__map,
+    &__search {
+      width: 100%;
+    }
+
+    &__search-content {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    &__map {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 2;
+      background: #fff;
+      transition: all 0.25s ease;
+
+      &--active {
+        left: 0;
+      }
+    }
+
+    &__switcher {
+      display: block;
+    }
+  }
+}
